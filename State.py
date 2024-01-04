@@ -1,9 +1,5 @@
 class State:
     goal = [2, 0, 8, 1, 6, 3, 7, 5, 4]
-    
-    greedy_evaluation = None
-    AStar_evaluation = None
-    heuristic = None
     def __init__(self, state, parent, direction, depth, cost):
         self.state = state
         self.parent = parent
@@ -94,6 +90,7 @@ def print_space_tree(node, max_depth=2, current_depth=0):
     print("State:", node.state)
     print("Direction:", node.direction)
     print("Cost:", node.cost)
+    print('\n')
 
     children = node.expand(int(len(node.state) ** 0.5))  # Get children for the current node
     for child in children:

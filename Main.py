@@ -10,6 +10,7 @@ print("The goal state is:", goal)
 #State Space Tree Generation:
 initial_node = State(root, None, None, 0, 0)
 print_space_tree(initial_node)
+print('\n')
 
 #DFS solver:
 DFS_solution = DFS(root, 3)

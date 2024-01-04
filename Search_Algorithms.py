@@ -33,7 +33,7 @@ def AStar_search(given_state , n):
     explored = []
     counter = 0
     root = State(given_state, None, None, 0, 0)
-    evaluation = root.Manhattan_Distance(n) #we can use Misplaced_Tiles() instead.
+    evaluation = root.Manhattan_Distance(n)
     frontier.put((evaluation[1], counter, root)) #based on A* evaluation
 
     while not frontier.empty():
@@ -48,6 +48,6 @@ def AStar_search(given_state , n):
         for child in children:
             if child.state not in explored:
                 counter += 1
-                evaluation = child.Manhattan_Distance(n) #we can use Misplaced_Tiles() instead.
+                evaluation = child.Manhattan_Distance(n)
                 frontier.put((evaluation[1], counter, child)) #based on A* evaluation
     return
